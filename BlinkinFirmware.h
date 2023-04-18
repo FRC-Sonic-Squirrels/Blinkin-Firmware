@@ -97,13 +97,40 @@ uint8_t stripLength = 60;
 uint8_t pos = 0;
 uint8_t prevpos =0;
 
+/*
+#define HOT_PINK 0xFF00AA
+#define DARK_RED 0xffff00
+#define RED      0xFFe000
+#define RED_ORNG 0xFFd000
+#define ORANGE   0xFFc000
+#define GOLD     0xFFb000
+#define YELLOW   0xFFa000
+#define LAWN_GRN 0xfF9000
+#define LIME     0xFF8000
+#define DARK_GRN 0xff7000
+#define GREEN    0xFF6000
+#define BLUE_GRN 0xFF5000
+#define AQUA     0xFF4000
+#define SKYBLUE  0xFF0c00
+#define DARK_BLU 0xff0a00
+#define BLUE     0xff0800
+#define B_VIOLET 0xff0600
+#define VIOLET   0xAA00FF
+#define WHITE    0xFFFFFF
+#define GRAY     0x4D4D4D
+#define DARKGRAY 0x1A1A1A
+#define BLACK    0x000000
+/**/
+
+
+
 #define HOT_PINK 0xFF00AA
 #define DARK_RED 0x990000
 #define RED      0xFF0000
-#define RED_ORNG 0xFF6A00
-#define ORANGE   0xFF8C00
-#define GOLD     0xFFEA00
-#define YELLOW   0xFFFF00
+#define RED_ORNG 0xff0600 // 0xFF6A00
+#define ORANGE   0xff1800 // 0xFF8C00
+#define GOLD     0xff4000 // 0xFFEA00
+#define YELLOW   0xFFff00
 #define LAWN_GRN 0xBFFF00
 #define LIME     0x80FF00
 #define DARK_GRN 0x009900
@@ -119,6 +146,8 @@ uint8_t prevpos =0;
 #define GRAY     0x4D4D4D
 #define DARKGRAY 0x1A1A1A
 #define BLACK    0x000000
+
+/**/
 
                            //0xFF00AA,   0x990000, 0xFF0000, 0xFF6A00, 0xFF8C00, 0xFFEA00, 0xFFFF00, 0xBFFF00, 0x80FF00, 0x009900, 0x00FF00, 0x00FFAA, 0x00FFFF, 0x0080FF, 0x000099, 0x0000FF, 0x8000FF, 0xAA00FF, 0xFFFFFF, 0x4D4D4D, 0x1A1A1A, 0x000000, 
  const  CRGB colorList[]  = {HOT_PINK,   DARK_RED, RED     , RED_ORNG, ORANGE  , GOLD    , YELLOW  , LAWN_GRN, LIME    , DARK_GRN, GREEN   , BLUE_GRN, AQUA    , SKYBLUE , DARK_BLU, BLUE    , B_VIOLET, VIOLET  , WHITE   , GRAY    , DARKGRAY, BLACK};
