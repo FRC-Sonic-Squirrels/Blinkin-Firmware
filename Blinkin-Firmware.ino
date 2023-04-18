@@ -59,7 +59,8 @@ void setup() {
   //LOW for 5V, HIGH for 12V
   pinMode(IND_PIN, OUTPUT);
 
-  if (addressableStrip == true) {
+ // if (addressableStrip == true) {
+     if (false) {
     digitalWrite(IND_PIN, LOW);
     fill_solid( leds, NUM_LEDS, CRGB::Black );
     FastLED.show();
@@ -281,10 +282,10 @@ void ledUpdate()
 
   // send the 'leds' array out to the actual LED strip
 //  //30uS per LED for addressable
-  if (addressableStrip == true) {
+ // if (addressableStrip == true) {
     //update LED display
-    FastLED.show();
-  }
+   // FastLED.show();
+//  }
 
 
   updatedLEDs = true; //set status flag to show that LEDs have been updates to latest requested value
@@ -304,7 +305,8 @@ void showAnalogRGB( const CRGB& rgb)
 
 void displaySolid( CRGB rgb)
 {
-  if (addressableStrip == true) {
+  //if (addressableStrip == true) {
+    if (false) {
     //fill_solid( leds, NUM_LEDS, rgb );
     fill_solid( leds, stripLength, rgb );
   }
@@ -328,7 +330,7 @@ void toggleStripSelect()
     if(writeEEPROM)
         EEPROM.write(SS_EE, addressableStrip);
   }
-  else
+ /* else
   {
     Black();
     digitalWrite(IND_PIN, LOW);
@@ -337,7 +339,7 @@ void toggleStripSelect()
     //EEPROM write takes 3.3ms
     if(writeEEPROM)
       EEPROM.write(SS_EE, addressableStrip);
-  }
+  } */
 
 }
 

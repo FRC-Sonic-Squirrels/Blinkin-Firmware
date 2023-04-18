@@ -14,7 +14,8 @@ void rainbow_Forest()     {   rainbow(ForestColors_p);      }
 
 void rainbow(CRGBPalette16 palette)
 {
-  if (addressableStrip == true) {
+ // if (addressableStrip == true) {
+     if (false) {
 
     uint8_t colorIndex = startIndex; //startIndex+1;
     uint8_t patternLength = map(patternAdj, 0, 30, 1, 10);

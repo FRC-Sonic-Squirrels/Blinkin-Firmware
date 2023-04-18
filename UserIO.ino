@@ -154,7 +154,8 @@ void SetupCustomPalette(CRGB color1, CRGB color2)
 
 void testPattern()
 {  
-  if (addressableStrip == true) {
+ // if (addressableStrip == true) {
+     if (false) {
     uint8_t colorIndex = 1;
     
     for( int i = 0; i < stripLength; i++) {
