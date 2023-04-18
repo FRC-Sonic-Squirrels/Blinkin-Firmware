@@ -1,3 +1,5 @@
+Branch: worlds2023 - This is a merge of "disablecmds" and "customcolors" branches that should be used for worlds competition if possible.
+
 # REV Blinkin LED Driver
 
 ## Getting Started
