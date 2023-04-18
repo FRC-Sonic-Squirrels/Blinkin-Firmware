@@ -1,3 +1,5 @@
+Branch:disablecmds - This has code modified to disable the test commands that might be cause the issue.  (#define DISABLE_TEST_COMMANDS 1).  This does not have the customcolors changes.
+
 # REV Blinkin LED Driver
 
 ## Getting Started
