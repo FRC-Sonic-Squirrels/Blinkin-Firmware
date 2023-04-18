@@ -9,6 +9,9 @@
 
 FASTLED_USING_NAMESPACE
 
+// Disable test commands to ensure that a spurious PWM pulse does not cause the Blinkin to swithc 5v/12v modes or turn off the LEDs
+#define DISABLE_TEST_COMMANDS 1
+
 #define writeEEPROM true
 
 #define LED_PIN     7 //Data line for addressable strip
@@ -65,8 +68,10 @@ boolean stripTransistion = false;
 
 boolean addressableStrip = true;
 
+#if !DISABLE_TEST_COMMANDS
 volatile boolean commandSeq = false;
 uint8_t currCommand = 0;
+#endif // #if !DISABLE_TEST_COMMANDS
 
 CRGBPalette16 currentPalette;
 CRGBPalette16 teamPalette;

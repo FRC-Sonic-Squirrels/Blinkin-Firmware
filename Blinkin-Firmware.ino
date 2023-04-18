@@ -79,8 +79,7 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(2), ISRrising, RISING);
 }
 
-//List of patterns.  Each is defined as a separate function in the specified tab.
-typedef void (*FunctionList)();
+#if !DISABLE_TEST_COMMANDS
 typedef void (*CommandList)(char);
 
 //List of commands.  Each is defined as a separate function in the specified tab.
@@ -96,7 +95,10 @@ const CommandList gCommands[]  = {
   cmdSetLinearBlend,            // 8  ........ PWM_0_Command
   cmdSetNoBlend,                // 9  ........ PWM_0_Command
 };
+#endif // #if !DISABLE_TEST_COMMANDS
 
+//List of patterns.  Each is defined as a separate function in the specified tab.
+typedef void (*FunctionList)();
 const FunctionList gPatterns[]  = {
 rainbow_RGB,           //  0..... PWM_1_Standard
 rainbow_Party,         //  1..... PWM_1_Standard

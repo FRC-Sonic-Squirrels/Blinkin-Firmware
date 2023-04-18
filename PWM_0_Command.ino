@@ -1,3 +1,4 @@
+#if !DISABLE_TEST_COMMANDS
 void cmdNoStrip(char var)             {  
   displaySolid(BLACK);  
   cmdDisableOutput = true;
@@ -42,5 +43,6 @@ void cmdChangeDefaultPattern(char var){  noSignalPatternDisplay = var; }
 void cmdSetNoBlend(char var)          {  currentBlending = NOBLEND; }
 
 void cmdSetLinearBlend(char var)      {  currentBlending = LINEARBLEND; }
+#endif // #if !DISABLE_TEST_COMMANDS
 
 

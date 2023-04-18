@@ -52,8 +52,11 @@ void ISRfalling()
 
   //TCNT1*0.0000005 = pulse width (seconds)
   if ((pwm_value <= 4000) && (pwm_value >= 1990)) {
+#if !DISABLE_TEST_COMMANDS
     if (commandSeq == false) {
+#endif // #if !DISABLE_TEST_COMMANDS
       patternHistory.unshift((byte)constrain(map(pwm_value, 2000, 4000, 0, 100),0,99) ); //4000 is 2000ms and 1000 is 1000ms
+#if !DISABLE_TEST_COMMANDS
     }
     else {
       gCommands[currCommand](map(pwm_value, 2000, 4000, 0, 99));
@@ -61,7 +64,9 @@ void ISRfalling()
       commandSeq = false;
       setStatusRun();
     }
+#endif // #if !DISABLE_TEST_COMMANDS
   }
+#if !DISABLE_TEST_COMMANDS
   else if ((pwm_value >= 4200) && (pwm_value <= 4400)) {
     if ((inSetup == false)) {
 
@@ -73,6 +78,7 @@ void ISRfalling()
         currCommand = constrain(map(pwm_value, 4200, 4401, 0, 10), 0, 9);
     }
   }
+#endif // #if !DISABLE_TEST_COMMANDS
 
   prev_time = 0;
   inPulse = false;
